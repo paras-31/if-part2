@@ -1,0 +1,23 @@
+name: Checkout workflow 
+
+on: 
+
+workflow_dispatch
+
+  
+
+jobs: 
+
+  reusable-checkout: 
+
+    runs-on: ubuntu-latest 
+
+    steps: 
+
+    - uses: actions/checkout@v3 
+
+    - name: list the repo files 
+
+      run: ls 
+    - name: paras
+      run: echo "hy paras"
