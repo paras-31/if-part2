@@ -1,8 +1,11 @@
-name: Checkout workflow 
+name: if-part2
 
 on: 
 
   workflow_dispatch:
+       inputs :
+          condition:
+            description: "condition"
 
   
 
@@ -19,5 +22,7 @@ jobs:
     - name: list the repo files 
 
       run: ls 
+    
     - name: paras
+      if: ${{ inputs.condition == 'true'}}
       run: echo "hy paras"
